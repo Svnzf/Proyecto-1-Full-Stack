@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*sección para estilo de Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8D729F;
+    color: white;
+    padding: 15px;
+}
+  
+.logo img {
+    max-width: 200px;
+}
+  
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+  
+.nav-links li {
+    margin-right: 20px;
+}
+  
+.nav-links li:last-child {
+    margin-right: 0;
+}
+  
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+  
+  /* Estilos para dispositivos móviles */
+.menu-toggle {
+    display: none;
+  }
+  
+.menu-toggle input {
+    display: none;
+  }
+  
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+  }
+  
+.nav-links-mobile {
+    list-style: none;
+    text-align: center;
+    display: none;
+  }
+  
+.nav-links-mobile li {
+    margin-bottom: 10px;
+  }
+  
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+.menu-icon {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+    }
+  
+    .menu-toggle input:checked ~ .nav-links-mobile {
+      display: block;
+    }
+  }
+
+/* sección banner*/
+
+.banner {
+    background-image: url('./imgs/fondobanner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+  
+  .banner-content {
+    text-align: left;
+    background-color: #8D729F;
+    padding: 40px;
+    border-radius: 8px;
+    width: auto;
+    height: auto;
+    max-width: 80%;
+  }
+  
+  .banner-content h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .banner-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+  
+  .input-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .newsletter-form input[type="email"] {
+    flex: 1;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    margin-right: 10px;
+    color: #8D729F;
+  }
+  
+  .newsletter-form button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #72488E;
+    color: #FFF;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    max-width: 100px;
+  }
+  
+  .newsletter-form button:hover {
+    background-color: #591685;
+  }
+  
+  /* Media query para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .input-group {
+      flex-direction: column;
+      align-items: stretch;
+      max-width: 100%;
+    }
+  
+    .newsletter-form input[type="email"] {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .newsletter-form button {
+      max-width: 100%;
+    }
+  }
+  
+/* sección clases*/
+
+  .clases{
+    color: #72488E;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+
+/* seccion de cartas de clases*/
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px auto;
+}
+  
+.card {
+    width: 300px;
+    background-color: #EAD8F6;
+    border: px solid #72488E;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px;
+}
+  
+.card-title {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #72488E;
+    text-transform: uppercase;
+}
+  
+.card-subtitle {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #72488E;
+    text-transform: uppercase;
+}
+  
+.card-image {
+    width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+  
+.card-price {
+    font-size: 20px;
+    color: #72488E;
+    margin: 5px 0;
+}
+
+.card-text {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #72488E;
+}
+  
+.card-button {
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    background-color: #72488E;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+  
+.card-button:hover {
+    background-color: #612D84;
+}
+  
+  /* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .card {
+      width: 100%;
+      margin: 10px 0;
+    }
+}
+
+/* sección de aventura*/
+
+.aventura-yoga {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200px 80px;
+  }
+  
+  .texto {
+    max-width: 60%;
+    color: #72488E;
+    margin-bottom: 20px;
+  }
+  
+.text-aventurayyoga{
+    display: flex;
+    place-items: baseline normal; 
+    gap: 15px;
+
+}
+
+
+  .aventura-texto {
+    font-weight: bold;
+    font-size: 2.5em;
+    margin: 0;
+  }
+  
+
+  .botones {
+    display: flex;
+
+  }
+  
+  .crear-cuenta-btn,
+  .iniciar-sesion-btn {
+    padding: 10px 20px;
+    margin-left: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .crear-cuenta-btn {
+    background-color: #8D729F;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .iniciar-sesion-btn {
+    background-color: #C7ABD9;
+    border-color: #72488E;
+    border-style: solid;
+    border-width: 1px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .crear-cuenta-btn:hover,
+  .iniciar-sesion-btn:hover {
+    background-color: #612D84;
+  }
+  
+  /* Media query para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .aventura-yoga {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .aventura-texto {
+      font-size: 2em;
+    }
+  
+    .botones {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .crear-cuenta-btn,
+    .iniciar-sesion-btn {
+      margin-left: 0;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Media query para pantallas de escritorio */
+  @media (min-width: 769px) {
+    .aventura-yoga {
+      align-items: center;
+    }
+  
+    .texto {
+      text-align: left;
+      margin-right: 20px;
+    }
+  
+    .botones {
+      margin-left: 0%;
+    }
+  }
+  
